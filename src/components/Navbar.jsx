@@ -3,7 +3,7 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className=" bg-base-100 shadow-sm">
+    <div className=" sticky top-0 z-50 bg-base-100 shadow-sm">
       <div className="navbar container  mx-auto ">
         <div className="navbar-start">
           <div className="dropdown">
@@ -38,7 +38,7 @@ const Navbar = () => {
             </ul>
           </div>
           <Link href={"/"} className="text-2xl font-bold">
-            Qurbani<span className="text-green-600">HAAT</span>
+            Qurbani<span className="text-green-600">HAT</span>
           </Link>
         </div>
         <div className="navbar-center hidden md:flex">
@@ -54,11 +54,23 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           <ul className="flex items-center gap-4">
-            <li className="btn">
-              <Link href={"/signup"}>SignUp</Link>
+            <li>
+              <Link
+                href={"/signup"}
+                className=" btn px-4 py-2 rounded-full bg-white text-green-700 font-medium 
+hover:bg-gray-100 transition"
+              >
+                SignUp
+              </Link>
             </li>
-            <li className="btn">
-              <Link href={"/signin"}>SignIn</Link>
+            <li>
+              <Link
+                href={"/signin"}
+                className="btn px-4 py-2 rounded-full bg-white text-green-700 font-medium 
+hover:bg-gray-100 transition"
+              >
+                SignIn
+              </Link>
             </li>
           </ul>
         </div>
