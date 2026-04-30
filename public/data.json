@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "name": "Deshi Shahi Cow",
+    "type": "Cow",
+    "breed": "Local Deshi",
+    "price": 120000,
+    "weight": 280,
+    "age": 3,
+    "location": "Bogura",
+    "description": "Healthy deshi cow suitable for Qurbani. Raised with natural food.",
+    "image": "https://images.unsplash.com/photo-1766858207728-698384162e8e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "category": "Large Animal"
+  },
+  {
+    "id": 2,
+    "name": "Rajshahi Premium Cow",
+    "type": "Cow",
+    "breed": "Cross Breed",
+    "price": 150000,
+    "weight": 320,
+    "age": 4,
+    "location": "Rajshahi",
+    "description": "Strong and healthy farm cow with excellent meat quality.",
+    "image": "https://images.unsplash.com/photo-1639165922187-5108d1d6942f?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "category": "Large Animal"
+  },
+  {
+    "id": 3,
+    "name": "Black Bengal Goat",
+    "type": "Goat",
+    "breed": "Black Bengal",
+    "price": 35000,
+    "weight": 40,
+    "age": 2,
+    "location": "Dhaka",
+    "description": "Healthy Black Bengal goat, perfect for Qurbani sacrifice.",
+    "image": "https://images.unsplash.com/photo-1759697454967-8708c1225c5f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "category": "Small Animal"
+  },
+  {
+    "id": 4,
+    "name": "Mountain White Goat",
+    "type": "Goat",
+    "breed": "Hilly Breed",
+    "price": 42000,
+    "weight": 48,
+    "age": 3,
+    "location": "Chittagong",
+    "description": "Naturally raised goat from hilly region, strong and healthy.",
+    "image": "https://images.unsplash.com/photo-1761945729356-34eb5f7c9254?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "category": "Small Animal"
+  },
+  {
+    "id": 5,
+    "name": "Desert King Camel",
+    "type": "Camel",
+    "breed": "Arabian",
+    "price": 350000,
+    "weight": 600,
+    "age": 6,
+    "location": "Sylhet",
+    "description": "Strong Arabian camel, healthy and ready for special Qurbani.",
+    "image": "https://plus.unsplash.com/premium_photo-1701171077896-f91e83f950b7?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "category": "Large Animal"
+  },
+  {
+    "id": 6,
+    "name": "Golden Desert Camel",
+    "type": "Camel",
+    "breed": "Desert Breed",
+    "price": 400000,
+    "weight": 650,
+    "age": 7,
+    "location": "Rangpur",
+    "description": "Premium desert camel with excellent health and strength.",
+    "image": "https://images.unsplash.com/photo-1748415696257-0e2a0033ec22?q=80&w=1084&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "category": "Large Animal"
+  }
+]

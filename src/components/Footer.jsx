@@ -23,23 +23,25 @@ const Footer = () => {
 
           {/* Contact */}
           <div className="flex flex-col items-start md:items-center">
-            <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
 
-            <div className="space-y-3 text-green-100">
-              <p className="flex items-center gap-2">
-                <IoLocationOutline />
-                Mirpur-2, Dhaka, Bangladesh
-              </p>
+              <div className="space-y-3 text-green-100">
+                <p className="flex items-center gap-2">
+                  <IoLocationOutline />
+                  Mirpur-2, Dhaka, Bangladesh
+                </p>
 
-              <p className="flex items-center gap-2">
-                <IoIosCall />
-                +880 1234-567890
-              </p>
+                <p className="flex items-center gap-2">
+                  <IoIosCall />
+                  +880 1234-567890
+                </p>
 
-              <p className="flex items-center gap-2">
-                <MdEmail />
-                support@qurbanihat.com
-              </p>
+                <p className="flex items-center gap-2">
+                  <MdEmail />
+                  support@qurbanihat.com
+                </p>
+              </div>
             </div>
           </div>
 
