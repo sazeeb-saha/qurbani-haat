@@ -38,7 +38,7 @@ const Navbar = () => {
             </ul>
           </div>
           <Link href={"/"} className="text-2xl font-bold">
-            Qurbani<span className="text-red-500">HAAT</span>
+            Qurbani<span className="text-green-600">HAAT</span>
           </Link>
         </div>
         <div className="navbar-center hidden md:flex">
