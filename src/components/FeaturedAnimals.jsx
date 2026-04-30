@@ -7,7 +7,7 @@ const FeaturedAnimals = async () => {
   const homeAnimals = data.slice(0, 4);
 
   return (
-    <div>
+    <div className="container mx-auto ">
       <h2 className="text-2xl font-bold mb-4 text-center md:text-left mt-10">
         Featured Animals
       </h2>

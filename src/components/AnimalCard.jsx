@@ -2,14 +2,14 @@ import Image from "next/image";
 
 const AnimalCard = ({ animal }) => {
   return (
-    <div className="card bg-base-100 w-96 shadow-sm">
+    <div className="card bg-base-100 w-96 md:w-full shadow-sm ">
       <figure>
         <Image
           src={animal.image}
           height={200}
           width={200}
           alt={animal.name}
-          className="w-full rounded-xl"
+          className="w-full rounded-xl "
         />
       </figure>
       <div className="card-body">
