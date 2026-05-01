@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const AnimalCard = ({ animal }) => {
   return (
@@ -6,10 +7,10 @@ const AnimalCard = ({ animal }) => {
       <figure>
         <Image
           src={animal.image}
-          height={200}
-          width={200}
+          height={600}
+          width={600}
           alt={animal.name}
-          className="w-full rounded-xl "
+          className="w-full rounded-t-xl h-full "
           priority
         />
       </figure>
@@ -20,9 +21,11 @@ const AnimalCard = ({ animal }) => {
           Price: <span className="font-medium">{animal.price} Tk</span>
         </p>
         <div className="card-actions justify-end items-center">
-          <button className=" bg-green-600 py-2 px-4 rounded-lg hover:bg-green-700 text-white font-semibold btn">
-            Details
-          </button>
+          <Link href={`/animals/${animal.id}`}>
+            <button className=" bg-green-600 py-2 px-4 rounded-lg hover:bg-green-700 text-white font-semibold btn">
+              Details
+            </button>
+          </Link>
         </div>
       </div>
     </div>
