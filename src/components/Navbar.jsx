@@ -78,6 +78,11 @@ const Navbar = () => {
                 All Animals
               </Link>
             </li>
+            <li>
+              <Link href={"/profile"} className={isActive("/profile")}>
+                My Profile
+              </Link>
+            </li>
           </ul>
         </div>
         <div className="navbar-end">
@@ -112,7 +117,7 @@ const Navbar = () => {
                 <Avatar.Fallback>{user?.name[0]}</Avatar.Fallback>
               </Avatar>
               <Button onClick={handleSignOut} size="sm" variant="danger">
-                SignOut
+                LogOut
               </Button>
             </div>
           )}
