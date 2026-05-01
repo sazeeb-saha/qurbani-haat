@@ -68,7 +68,10 @@ const LogInPage = () => {
 
           <p className="flex justify-center items-center gap-2">
             Don't have an Account?{" "}
-            <Link href="/registration" className="text-blue-600 cursor-pointer">
+            <Link
+              href="/registration"
+              className="text-blue-600 cursor-pointer "
+            >
               {" "}
               Register Here!
             </Link>
