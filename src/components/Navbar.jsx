@@ -1,7 +1,16 @@
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 const Navbar = () => {
+  const pathName = usePathname() || "/";
+  const isActive = (path) =>
+    `px-2 py-1 transition ${
+      pathName === path
+        ? "text-green-500 font-bold border-b-2 border-green-500"
+        : " text-black "
+    }`;
   return (
     <div className=" sticky top-0 z-50 bg-base-100 shadow-sm">
       <div className="navbar container  mx-auto ">
@@ -29,11 +38,15 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
               <li>
-                <Link href={"/"}>Home</Link>
+                <Link href={"/"} className={isActive("/")}>
+                  Home
+                </Link>
               </li>
 
               <li>
-                <Link href={"/animals"}>All Animals</Link>
+                <Link href={"/animals"} className={isActive("/animals")}>
+                  All Animals
+                </Link>
               </li>
             </ul>
           </div>
@@ -42,13 +55,17 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="navbar-center hidden md:flex">
-          <ul className="menu menu-horizontal px-1">
+          <ul className="menu menu-horizontal px-1 gap-4">
             <li>
-              <Link href={"/"}>Home</Link>
+              <Link href={"/"} className={isActive("/")}>
+                Home
+              </Link>
             </li>
 
             <li>
-              <Link href={"/animals"}>All Animals</Link>
+              <Link href={"/animals"} className={isActive("/animals")}>
+                All Animals
+              </Link>
             </li>
           </ul>
         </div>
@@ -57,8 +74,7 @@ const Navbar = () => {
             <li>
               <Link
                 href={"/signup"}
-                className=" btn px-4 py-2 rounded-full bg-white text-green-700 font-medium 
-hover:bg-gray-100 transition"
+                className=" btn px-4 py-2 rounded-full bg-white text-green-700 font-medium hover:bg-gray-100 transition"
               >
                 SignUp
               </Link>
@@ -66,8 +82,7 @@ hover:bg-gray-100 transition"
             <li>
               <Link
                 href={"/signin"}
-                className="btn px-4 py-2 rounded-full bg-white text-green-700 font-medium 
-hover:bg-gray-100 transition"
+                className="btn px-4 py-2 rounded-full bg-white text-green-700 font-medium hover:bg-gray-100 transition"
               >
                 SignIn
               </Link>
