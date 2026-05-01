@@ -2,7 +2,9 @@ import AnimalCard from "@/components/AnimalCard";
 import React from "react";
 
 const AllAnimalPage = async () => {
-  const res = await fetch("https://qurbani-hat-saz.vercel.app/data.json");
+  const res = await fetch("https://qurbani-hat-saz.vercel.app/data.json", {
+    cache: "no-store",
+  });
   const data = await res.json();
   return (
     <div className="container mx-auto ">
