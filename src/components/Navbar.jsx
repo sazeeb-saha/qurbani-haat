@@ -1,9 +1,20 @@
 "use client";
+import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
+import { Avatar, Button } from "@heroui/react";
 
 const Navbar = () => {
+  const userData = authClient.useSession();
+  const user = userData.data?.user;
+
+  console.log(user);
+
+  const handleSignOut = async () => {
+    await authClient.signOut();
+  };
+
   const pathName = usePathname() || "/";
   const isActive = (path) =>
     `px-2 py-1 transition ${
@@ -70,24 +81,41 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <ul className="flex items-center gap-4">
-            <li>
-              <Link
-                href={"/registration"}
-                className=" btn px-4 py-2 rounded-full bg-white text-green-700 font-medium hover:bg-gray-100 transition"
-              >
-                Register
-              </Link>
-            </li>
-            <li>
-              <Link
-                href={"/login"}
-                className="btn px-4 py-2 rounded-full bg-white text-green-700 font-medium hover:bg-gray-100 transition"
-              >
-                LogIn
-              </Link>
-            </li>
-          </ul>
+          {!user && (
+            <ul className="flex items-center gap-4">
+              <li>
+                <Link
+                  href={"/registration"}
+                  className=" btn px-4 py-2 rounded-full bg-white text-green-700 font-medium hover:bg-gray-100 transition"
+                >
+                  Register
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={"/login"}
+                  className="btn px-4 py-2 rounded-full bg-white text-green-700 font-medium hover:bg-gray-100 transition"
+                >
+                  LogIn
+                </Link>
+              </li>
+            </ul>
+          )}
+          {user && (
+            <div className="flex items-center gap-4">
+              <Avatar size="sm">
+                <Avatar.Image
+                  alt="John Doe"
+                  src={user?.image}
+                  referrerPolicy="no-referrer"
+                />
+                <Avatar.Fallback>{user?.name[0]}</Avatar.Fallback>
+              </Avatar>
+              <Button onClick={handleSignOut} size="sm" variant="danger">
+                SignOut
+              </Button>
+            </div>
+          )}
         </div>
       </div>
     </div>
