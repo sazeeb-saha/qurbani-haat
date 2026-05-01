@@ -73,18 +73,18 @@ const Navbar = () => {
           <ul className="flex items-center gap-4">
             <li>
               <Link
-                href={"/signup"}
+                href={"/registration"}
                 className=" btn px-4 py-2 rounded-full bg-white text-green-700 font-medium hover:bg-gray-100 transition"
               >
-                SignUp
+                Register
               </Link>
             </li>
             <li>
               <Link
-                href={"/signin"}
+                href={"/login"}
                 className="btn px-4 py-2 rounded-full bg-white text-green-700 font-medium hover:bg-gray-100 transition"
               >
-                SignIn
+                LogIn
               </Link>
             </li>
           </ul>

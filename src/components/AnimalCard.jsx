@@ -10,7 +10,7 @@ const AnimalCard = ({ animal }) => {
           height={600}
           width={600}
           alt={animal.name}
-          className="w-full rounded-t-xl h-full "
+          className="w-full rounded-t-xl h- "
           priority
         />
       </figure>
