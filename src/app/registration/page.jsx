@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 import { FcGoogle } from "react-icons/fc";
+import { toast, ToastContainer } from "react-toastify";
 
 export default function RegisterPage() {
   const router = useRouter();
@@ -28,6 +29,14 @@ export default function RegisterPage() {
     if (!error) {
       router.push("/");
     }
+
+    if (error) {
+      toast.error(error.message || "Login failed");
+      return;
+    }
+
+    toast.success("Login successful");
+    e.target.reset();
   };
 
   const handleGoogleSignIn = async () => {
@@ -45,6 +54,7 @@ export default function RegisterPage() {
           <div>
             <label className="block text-sm font-medium mb-1">Full Name</label>
             <Input
+              required
               name="name"
               type="text"
               placeholder="Enter your name"
@@ -59,6 +69,7 @@ export default function RegisterPage() {
               Email Address
             </label>
             <Input
+              required
               name="email"
               type="email"
               placeholder="you@example.com"
@@ -71,6 +82,7 @@ export default function RegisterPage() {
           <div>
             <label className="block text-sm font-medium mb-1">Image URL</label>
             <Input
+              required
               name="image"
               type="text"
               placeholder="https://your-image-link.com"
@@ -83,6 +95,7 @@ export default function RegisterPage() {
           <div>
             <label className="block text-sm font-medium mb-1">Password</label>
             <Input
+              required
               name="password"
               type="password"
               placeholder="Enter password"

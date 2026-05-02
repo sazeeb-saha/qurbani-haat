@@ -3,9 +3,12 @@
 import { authClient } from "@/lib/auth-client";
 import { Input, Button, Card } from "@heroui/react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { FcGoogle } from "react-icons/fc";
+import { toast, ToastContainer } from "react-toastify";
 
 const LogInPage = () => {
+  const router = useRouter();
   const onSubmit = async (e) => {
     e.preventDefault();
 
@@ -15,9 +18,21 @@ const LogInPage = () => {
     const { data, error } = await authClient.signIn.email({
       email,
       password,
-      callbackURL: "/",
+      // callbackURL: "/",
     });
-    console.log(data, error);
+    if (!error) {
+      router.push("/");
+    }
+
+    if (error) {
+      toast.error(error.message || "Login failed");
+      return;
+    }
+
+    toast.success("Login successful");
+    e.target.reset();
+
+    // console.log(data, error);
   };
 
   const handleGoogleSignIn = async () => {
@@ -36,6 +51,7 @@ const LogInPage = () => {
               Email Address
             </label>
             <Input
+              required
               name="email"
               type="email"
               placeholder="you@example.com"
@@ -48,6 +64,7 @@ const LogInPage = () => {
           <div>
             <label className="block text-sm font-medium mb-1">Password</label>
             <Input
+              required
               name="password"
               type="password"
               placeholder="Enter password"

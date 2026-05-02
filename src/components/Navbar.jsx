@@ -121,9 +121,11 @@ const Navbar = () => {
                 />
                 <Avatar.Fallback>{user?.name[0]}</Avatar.Fallback>
               </Avatar>
-              <Button onClick={handleSignOut} size="sm" variant="danger">
-                LogOut
-              </Button>
+              <Link href={"/login"}>
+                <Button onClick={handleSignOut} size="sm" variant="danger">
+                  LogOut
+                </Button>
+              </Link>
             </div>
           )}
         </div>

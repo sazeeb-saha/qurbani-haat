@@ -1,10 +1,12 @@
 "use client";
 import { Button, Card, Input } from "@heroui/react";
+import { toast, ToastContainer } from "react-toastify";
 
 const BookingFrom = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
     e.target.reset();
+    toast.success("Booking Successful");
   };
 
   return (
