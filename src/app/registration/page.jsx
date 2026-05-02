@@ -2,6 +2,7 @@
 
 import { authClient } from "@/lib/auth-client";
 import { Input, Button, Card } from "@heroui/react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 import { FcGoogle } from "react-icons/fc";
@@ -28,6 +29,13 @@ export default function RegisterPage() {
       router.push("/");
     }
   };
+
+  const handleGoogleSignIn = async () => {
+    await authClient.signIn.social({
+      provider: "google",
+    });
+  };
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
       <Card className="w-full max-w-md p-8 shadow-2xl rounded-2xl">
@@ -92,6 +100,13 @@ export default function RegisterPage() {
           >
             Register
           </Button>
+          <p className="flex justify-center items-center gap-2">
+            Already have an Account?{" "}
+            <Link href="/login" className="text-blue-600 cursor-pointer ">
+              {" "}
+              LogIn!
+            </Link>
+          </p>
 
           <div className="flex items-center gap-3 my-2">
             <div className="flex-1 h-px bg-gray-300"></div>
@@ -99,7 +114,12 @@ export default function RegisterPage() {
             <div className="flex-1 h-px bg-gray-300"></div>
           </div>
 
-          <Button variant="bordered" radius="lg" className="w-full border ">
+          <Button
+            onClick={handleGoogleSignIn}
+            variant="bordered"
+            radius="lg"
+            className="w-full border "
+          >
             <FcGoogle />
             Continue with <span className="text-green-400">Google</span>
           </Button>

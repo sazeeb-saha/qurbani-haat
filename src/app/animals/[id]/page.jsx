@@ -1,3 +1,4 @@
+import BookingFrom from "@/components/BookingFrom";
 import Image from "next/image";
 import Link from "next/link";
 import { RiHome4Line } from "react-icons/ri";
@@ -61,6 +62,9 @@ const AnimalDetailsPage = async ({ params }) => {
           </div>
         </div>
       </div>
+
+      {/* Booking Form  */}
+      <BookingFrom />
     </div>
   );
 };

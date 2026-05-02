@@ -59,6 +59,11 @@ const Navbar = () => {
                   All Animals
                 </Link>
               </li>
+              <li>
+                <Link href={"/profile"} className={isActive("/profile")}>
+                  My Profile
+                </Link>
+              </li>
             </ul>
           </div>
           <Link href={"/"} className="text-2xl font-bold">

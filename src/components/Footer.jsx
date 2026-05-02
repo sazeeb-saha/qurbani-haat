@@ -1,4 +1,7 @@
 import React from "react";
+import { AiFillInstagram } from "react-icons/ai";
+import { FaFacebook } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
 import { IoIosCall } from "react-icons/io";
 import { IoLocationOutline } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
@@ -53,9 +56,18 @@ const Footer = () => {
               </h3>
 
               <div className="flex flex-row gap-2 text-green-100">
-                <a className="hover:text-white transition">Facebook</a>
-                <a className="hover:text-white transition">Instagram</a>
-                <a className="hover:text-white transition">Twitter</a>
+                <a className="hover:text-white transition">
+                  {" "}
+                  <FaFacebook size={40} />{" "}
+                </a>
+                <a className="hover:text-white transition">
+                  {" "}
+                  <AiFillInstagram size={40} />{" "}
+                </a>
+                <a className="hover:text-white transition">
+                  {" "}
+                  <FaSquareXTwitter size={40} />{" "}
+                </a>
               </div>
             </div>
           </div>
