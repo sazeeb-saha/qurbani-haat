@@ -3,14 +3,14 @@ import Link from "next/link";
 
 const AnimalCard = ({ animal }) => {
   return (
-    <div className="card bg-base-100 w-96 md:w-full shadow-lg  rounded-xl mb-10 ">
+    <div className="card bg-base-100 w-96 md:w-full shadow-md hover:shadow-2xl transition-all duration-300  rounded-xl mb-10 ">
       <figure>
         <Image
           src={animal.image}
           height={600}
           width={600}
           alt={animal.name}
-          className="w-full rounded-t-xl h- "
+          className="w-full rounded-t-xl group-hover:scale-110 transition-transform duration-300 "
           priority
         />
       </figure>
