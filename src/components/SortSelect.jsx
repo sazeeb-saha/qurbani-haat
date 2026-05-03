@@ -6,7 +6,7 @@ const SortSelect = ({ defaultValue }) => {
   return (
     <select
       defaultValue={defaultValue || ""}
-      className="select select-accent w-48 pt-2"
+      className="select select-success w-48 pt-2"
       onChange={(e) => {
         const value = e.target.value;
         router.push(`/animals?sort=${value}`);
