@@ -22,7 +22,7 @@ const AnimalDetailsPage = async ({ params }) => {
             priority
           />
         </figure>
-        <div className="lg:space-y-2 md:border-l md:border-green-300  pl-5 ">
+        <div className="lg:space-y-2 md:border-l md:border-green-300  md:pl-5 ">
           <h2 className="card-title">{animal.name}</h2>
           <p>
             <span className="font-medium">Type:</span> {animal.type}{" "}
