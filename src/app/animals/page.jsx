@@ -21,10 +21,10 @@ const AllAnimalPage = async ({ searchParams }) => {
 
   return (
     <div className="container mx-auto ">
-      <h2 className="text-2xl font-bold mb-4 text-center md:text-left mt-10 ">
-        All Animals:
-      </h2>
-      <SortSelect defaultValue={sort} />
+      <div className="text-2xl font-bold mb-4 text-center md:text-left mt-10 ">
+        <h2 className="text-2xl font-bold mb-4 ">All Animals:</h2>
+        <SortSelect defaultValue={sort} />
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center pt-5 ">
         {sortedData.map((animal) => (
