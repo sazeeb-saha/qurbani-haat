@@ -10,7 +10,7 @@ const AnimalCard = ({ animal }) => {
           height={600}
           width={600}
           alt={animal.name}
-          className="w-full rounded-t-xl group-hover:scale-110 transition-transform duration-300 "
+          className="w-full rounded-t-xl hover:scale-105 transition-transform duration-300 "
           priority
         />
       </figure>
