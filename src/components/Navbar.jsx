@@ -9,8 +9,6 @@ const Navbar = () => {
   const userData = authClient.useSession();
   const user = userData.data?.user;
 
-  console.log(user);
-
   const handleSignOut = async () => {
     await authClient.signOut();
   };
@@ -72,18 +70,18 @@ const Navbar = () => {
         </div>
         <div className="navbar-center hidden md:flex">
           <ul className="menu menu-horizontal px-1 gap-4">
-            <li>
+            <li className="hover:scale-105 transition-transform duration-300">
               <Link href={"/"} className={isActive("/")}>
                 Home
               </Link>
             </li>
 
-            <li>
+            <li className="hover:scale-105 transition-transform duration-300">
               <Link href={"/animals"} className={isActive("/animals")}>
                 All Animals
               </Link>
             </li>
-            <li>
+            <li className="hover:scale-105 transition-transform duration-300">
               <Link href={"/profile"} className={isActive("/profile")}>
                 My Profile
               </Link>
@@ -95,34 +93,45 @@ const Navbar = () => {
             <ul className="flex items-center gap-4">
               <li>
                 <Link
-                  href={"/registration"}
-                  className=" btn px-4 py-2 rounded-full bg-white text-green-700 font-medium hover:bg-gray-100 transition"
+                  href={"/login"}
+                  className="btn px-4 py-2 rounded-full bg-white text-green-700 font-medium hover:bg-gray-100  hover:scale-105 transition-transform duration-300"
                 >
-                  Register
+                  LogIn
                 </Link>
               </li>
               <li>
                 <Link
-                  href={"/login"}
-                  className="btn px-4 py-2 rounded-full bg-white text-green-700 font-medium hover:bg-gray-100 transition"
+                  href={"/registration"}
+                  className=" btn px-4 py-2 rounded-full bg-white text-green-700 font-medium hover:bg-gray-100  hover:scale-105 transition-transform duration-300"
                 >
-                  LogIn
+                  Register
                 </Link>
               </li>
             </ul>
           )}
           {user && (
             <div className="flex items-center gap-4">
-              <Avatar size="sm">
-                <Avatar.Image
-                  alt="John Doe"
-                  src={user?.image}
-                  referrerPolicy="no-referrer"
-                />
-                <Avatar.Fallback>{user?.name[0]}</Avatar.Fallback>
-              </Avatar>
+              <Link href={"/profile"} title="Profile">
+                <Avatar
+                  size="sm"
+                  className="hover:scale-105 transition-transform duration-300"
+                >
+                  <Avatar.Image
+                    alt="John Doe"
+                    src={user?.image}
+                    referrerPolicy="no-referrer"
+                  />
+                  <Avatar.Fallback>{user?.name[0]}</Avatar.Fallback>
+                </Avatar>
+              </Link>
+
               <Link href={"/login"}>
-                <Button onClick={handleSignOut} size="sm" variant="danger">
+                <Button
+                  onClick={handleSignOut}
+                  size="sm"
+                  variant="danger"
+                  className=" hover:scale-105 transition-transform duration-300"
+                >
                   LogOut
                 </Button>
               </Link>

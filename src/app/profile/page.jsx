@@ -1,7 +1,9 @@
 "use client";
 import UpdateProfileModal from "@/components/UpdateProfileModal";
 import { authClient } from "@/lib/auth-client";
-import { Avatar, Card } from "@heroui/react";
+import { Avatar, Button, Card } from "@heroui/react";
+import Link from "next/link";
+import { GrDocumentUpdate } from "react-icons/gr";
 
 const page = () => {
   const userData = authClient.useSession();
@@ -19,6 +21,7 @@ const page = () => {
         </Avatar>
         <h2 className="text-xl font-bold">{user?.name}</h2>
         <p className="text-muted">{user?.email}</p>
+
         <UpdateProfileModal />
       </Card>
     </div>

@@ -35,12 +35,22 @@ const UpdateProfileModal = () => {
             <Modal.Body className="p-6">
               <Surface variant="default">
                 <form onSubmit={onSubmit} className="flex flex-col gap-4">
-                  <TextField className="w-full" name="name" type="text">
+                  <TextField
+                    className="w-full"
+                    name="name"
+                    type="text"
+                    isRequired
+                  >
                     <Label>Name</Label>
                     <Input placeholder="Enter your name" />
                   </TextField>
 
-                  <TextField className="w-full" name="image" type="url">
+                  <TextField
+                    className="w-full"
+                    name="image"
+                    type="url"
+                    isRequired
+                  >
                     <Label>Image URL</Label>
                     <Input placeholder="Enter your Image URL" />
                   </TextField>

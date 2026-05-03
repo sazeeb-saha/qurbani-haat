@@ -21,8 +21,8 @@ const AllAnimalPage = async ({ searchParams }) => {
 
   return (
     <div className="container mx-auto ">
-      <h2 className="text-2xl font-bold mb-4 text-center md:text-left mt-10">
-        Featured Animals
+      <h2 className="text-2xl font-bold mb-4 text-center md:text-left mt-10 ">
+        All Animals:
       </h2>
       <SortSelect defaultValue={sort} />
 
