@@ -27,7 +27,7 @@ export default function RegisterPage() {
     });
     console.log(data, error);
     if (!error) {
-      router.push("/");
+      router.push("/login");
     }
 
     if (error) {
@@ -35,7 +35,7 @@ export default function RegisterPage() {
       return;
     }
 
-    toast.success("Login successful");
+    toast.success("Registration successful");
     e.target.reset();
   };
 
